@@ -2,7 +2,7 @@
 //  NewsListView.swift
 //  NewsApplication
 //
-//  Created by valters.steinblums on 12/12/2022.
+//  Created by valters.steinblums on 01/12/2022.
 //
 
 import SwiftUI

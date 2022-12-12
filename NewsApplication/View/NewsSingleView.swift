@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct NewsSingleView: View {
+    @EnvironmentObject var realmManager: RealmManager
     
     let article: Article
     
@@ -34,13 +35,20 @@ struct NewsSingleView: View {
                     Spacer()
                     
                     Button {
-                        //
+                        realmManager.addFavourite(from: article)
                     } label: {
                         //Image(systemName: favourite ? "heart.fill" : "heart")
                         Image(systemName: "heart")
                     }
                     .buttonStyle(.bordered)
                     .foregroundColor(.pink)
+                    
+                    Button {
+                        realmManager.removeFavourite(remove: article.id)
+                    } label: {
+                        Image(systemName: "trash")
+                    }
+                    .buttonStyle(.bordered)
                     
                     Button {
                         //
@@ -59,5 +67,6 @@ struct NewsSingleView: View {
 struct NewsSingleView_Previews: PreviewProvider {
     static var previews: some View {
         NewsSingleView(article: NewsData.previewNewsData[12])
+            .environmentObject(RealmManager())
     }
 }

@@ -8,14 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject var realmManager = RealmManager()
+    @StateObject var newsDataVM = NewsDataViewModel()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NewsListView(articles: articles)
+            .environmentObject(realmManager)
+    }
+    
+    private var articles: [Article] {
+        if case let .success(articles) = newsDataVM.phase {
+            return articles
+        } else {
+            return NewsData.previewNewsData
         }
-        .padding()
     }
 }
 
