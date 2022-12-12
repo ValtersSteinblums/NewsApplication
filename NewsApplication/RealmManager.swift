@@ -72,4 +72,11 @@ class RealmManager: ObservableObject {
         }
     }
     
+    func isArticleSaved(articleId: String) -> Bool {
+        if let localRealm = localRealm {
+            let savedArticles = localRealm.objects(NewsFavouritesViewModel.self).filter("id == %@", articleId)
+            return !savedArticles.isEmpty
+        }
+        return false
+    }
 }
