@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
- platform :ios, '12.0'
+ platform :ios, '13.0'
 
 target 'NewsApplication' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -7,5 +7,6 @@ target 'NewsApplication' do
 
   # Pods for NewsApplication
   pod 'RealmSwift', '~>10'
+  pod 'SDWebImageSwiftUI'
 
 end

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct NewsListView: View {
+    @EnvironmentObject var realmManager: RealmManager
     let articles: [Article]
     
     var body: some View {
@@ -25,5 +26,6 @@ struct NewsListView: View {
 struct NewsListView_Previews: PreviewProvider {
     static var previews: some View {
         NewsListView(articles: NewsData.previewNewsData)
+            .environmentObject(RealmManager())
     }
 }

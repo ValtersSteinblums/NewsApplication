@@ -8,6 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		29045819BE9034E89FAFD9C4 /* Pods_NewsApplication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F168CF79FBBADD14A26530EB /* Pods_NewsApplication.framework */; };
+		34781EFC29486581003E0C70 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34781EFB29486581003E0C70 /* CustomTabBar.swift */; };
+		34781EFE294872E7003E0C70 /* currentWeather.json in Resources */ = {isa = PBXBuildFile; fileRef = 34781EFD294872E7003E0C70 /* currentWeather.json */; };
+		34781F0029487302003E0C70 /* forecastWeather.json in Resources */ = {isa = PBXBuildFile; fileRef = 34781EFF29487302003E0C70 /* forecastWeather.json */; };
+		34781F0229487382003E0C70 /* NewsSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34781F0129487382003E0C70 /* NewsSearchView.swift */; };
+		34781F042948A5A6003E0C70 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34781F032948A5A6003E0C70 /* SettingsView.swift */; };
+		34781F062948AB12003E0C70 /* NewsHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34781F052948AB12003E0C70 /* NewsHomeView.swift */; };
+		34781F082948B0AF003E0C70 /* WeatherAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34781F072948B0AF003E0C70 /* WeatherAPI.swift */; };
+		34781F0A2948B0D7003E0C70 /* CurrentWeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34781F092948B0D7003E0C70 /* CurrentWeatherData.swift */; };
+		34781F0C2948B0FA003E0C70 /* ForecastWeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34781F0B2948B0FA003E0C70 /* ForecastWeatherData.swift */; };
+		34781F0E2948B1C3003E0C70 /* SimpleWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34781F0D2948B1C3003E0C70 /* SimpleWeatherView.swift */; };
+		34781F122948BCA5003E0C70 /* CurrentWeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34781F112948BCA5003E0C70 /* CurrentWeatherViewModel.swift */; };
 		34A9DED029471C09003E35CC /* NewsApplicationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A9DECF29471C09003E35CC /* NewsApplicationApp.swift */; };
 		34A9DED229471C09003E35CC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A9DED129471C09003E35CC /* ContentView.swift */; };
 		34A9DED429471C0B003E35CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34A9DED329471C0B003E35CC /* Assets.xcassets */; };
@@ -22,10 +33,22 @@
 		34A9DEF029471E9B003E35CC /* NewsCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A9DEEF29471E9B003E35CC /* NewsCountry.swift */; };
 		34A9DEF229472A1A003E35CC /* NewsFavouritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A9DEF129472A1A003E35CC /* NewsFavouritesViewModel.swift */; };
 		34A9DEF429472AC1003E35CC /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A9DEF329472AC1003E35CC /* RealmManager.swift */; };
+		34A9DEF629476323003E35CC /* NewsFavouritesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A9DEF529476323003E35CC /* NewsFavouritesListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1D2CBDCB13FDE37903E69290 /* Pods-NewsApplication.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsApplication.release.xcconfig"; path = "Target Support Files/Pods-NewsApplication/Pods-NewsApplication.release.xcconfig"; sourceTree = "<group>"; };
+		34781EFB29486581003E0C70 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		34781EFD294872E7003E0C70 /* currentWeather.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = currentWeather.json; sourceTree = "<group>"; };
+		34781EFF29487302003E0C70 /* forecastWeather.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = forecastWeather.json; sourceTree = "<group>"; };
+		34781F0129487382003E0C70 /* NewsSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsSearchView.swift; sourceTree = "<group>"; };
+		34781F032948A5A6003E0C70 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		34781F052948AB12003E0C70 /* NewsHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsHomeView.swift; sourceTree = "<group>"; };
+		34781F072948B0AF003E0C70 /* WeatherAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAPI.swift; sourceTree = "<group>"; };
+		34781F092948B0D7003E0C70 /* CurrentWeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherData.swift; sourceTree = "<group>"; };
+		34781F0B2948B0FA003E0C70 /* ForecastWeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastWeatherData.swift; sourceTree = "<group>"; };
+		34781F0D2948B1C3003E0C70 /* SimpleWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleWeatherView.swift; sourceTree = "<group>"; };
+		34781F112948BCA5003E0C70 /* CurrentWeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherViewModel.swift; sourceTree = "<group>"; };
 		34A9DECC29471C09003E35CC /* NewsApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34A9DECF29471C09003E35CC /* NewsApplicationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsApplicationApp.swift; sourceTree = "<group>"; };
 		34A9DED129471C09003E35CC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -41,6 +64,8 @@
 		34A9DEEF29471E9B003E35CC /* NewsCountry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCountry.swift; sourceTree = "<group>"; };
 		34A9DEF129472A1A003E35CC /* NewsFavouritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFavouritesViewModel.swift; sourceTree = "<group>"; };
 		34A9DEF329472AC1003E35CC /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		34A9DEF529476323003E35CC /* NewsFavouritesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFavouritesListView.swift; sourceTree = "<group>"; };
+		34E697A129476A9C0014BBCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		49E197512DB53F66990F478E /* Pods-NewsApplication.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsApplication.debug.xcconfig"; path = "Target Support Files/Pods-NewsApplication/Pods-NewsApplication.debug.xcconfig"; sourceTree = "<group>"; };
 		F168CF79FBBADD14A26530EB /* Pods_NewsApplication.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewsApplication.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -78,6 +103,7 @@
 		34A9DECE29471C09003E35CC /* NewsApplication */ = {
 			isa = PBXGroup;
 			children = (
+				34E697A129476A9C0014BBCD /* Info.plist */,
 				34A9DED129471C09003E35CC /* ContentView.swift */,
 				34A9DECF29471C09003E35CC /* NewsApplicationApp.swift */,
 				34A9DEF329472AC1003E35CC /* RealmManager.swift */,
@@ -85,9 +111,11 @@
 				34A9DEDF29471CE8003E35CC /* View */,
 				34A9DEDE29471CDE003E35CC /* ViewModel */,
 				34A9DEDD29471CD6003E35CC /* Model */,
+				34A9DEE129471D3A003E35CC /* news.json */,
+				34781EFD294872E7003E0C70 /* currentWeather.json */,
+				34781EFF29487302003E0C70 /* forecastWeather.json */,
 				34A9DED329471C0B003E35CC /* Assets.xcassets */,
 				34A9DED529471C0B003E35CC /* Preview Content */,
-				34A9DEE129471D3A003E35CC /* news.json */,
 			);
 			path = NewsApplication;
 			sourceTree = "<group>";
@@ -106,6 +134,8 @@
 				34A9DEE929471E25003E35CC /* NewsData.swift */,
 				34A9DEED29471E85003E35CC /* NewsCategory.swift */,
 				34A9DEEF29471E9B003E35CC /* NewsCountry.swift */,
+				34781F092948B0D7003E0C70 /* CurrentWeatherData.swift */,
+				34781F0B2948B0FA003E0C70 /* ForecastWeatherData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -115,6 +145,7 @@
 			children = (
 				34A9DEE329471D66003E35CC /* NewsDataViewModel.swift */,
 				34A9DEF129472A1A003E35CC /* NewsFavouritesViewModel.swift */,
+				34781F112948BCA5003E0C70 /* CurrentWeatherViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -122,8 +153,14 @@
 		34A9DEDF29471CE8003E35CC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				34781F052948AB12003E0C70 /* NewsHomeView.swift */,
 				34A9DEE529471D91003E35CC /* NewsSingleView.swift */,
 				34A9DEE729471DF1003E35CC /* NewsListView.swift */,
+				34A9DEF529476323003E35CC /* NewsFavouritesListView.swift */,
+				34781F0129487382003E0C70 /* NewsSearchView.swift */,
+				34781EFB29486581003E0C70 /* CustomTabBar.swift */,
+				34781F032948A5A6003E0C70 /* SettingsView.swift */,
+				34781F0D2948B1C3003E0C70 /* SimpleWeatherView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -132,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				34A9DEEB29471E57003E35CC /* NewsAPI.swift */,
+				34781F072948B0AF003E0C70 /* WeatherAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -215,7 +253,9 @@
 			files = (
 				34A9DEE229471D3A003E35CC /* news.json in Resources */,
 				34A9DED729471C0B003E35CC /* Preview Assets.xcassets in Resources */,
+				34781EFE294872E7003E0C70 /* currentWeather.json in Resources */,
 				34A9DED429471C0B003E35CC /* Assets.xcassets in Resources */,
+				34781F0029487302003E0C70 /* forecastWeather.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,17 +308,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34781F042948A5A6003E0C70 /* SettingsView.swift in Sources */,
 				34A9DEF029471E9B003E35CC /* NewsCountry.swift in Sources */,
 				34A9DEEE29471E85003E35CC /* NewsCategory.swift in Sources */,
 				34A9DEF429472AC1003E35CC /* RealmManager.swift in Sources */,
+				34781EFC29486581003E0C70 /* CustomTabBar.swift in Sources */,
+				34A9DEF629476323003E35CC /* NewsFavouritesListView.swift in Sources */,
+				34781F0C2948B0FA003E0C70 /* ForecastWeatherData.swift in Sources */,
+				34781F0E2948B1C3003E0C70 /* SimpleWeatherView.swift in Sources */,
 				34A9DEE429471D66003E35CC /* NewsDataViewModel.swift in Sources */,
 				34A9DEF229472A1A003E35CC /* NewsFavouritesViewModel.swift in Sources */,
 				34A9DEE629471D91003E35CC /* NewsSingleView.swift in Sources */,
 				34A9DEEA29471E25003E35CC /* NewsData.swift in Sources */,
 				34A9DEE829471DF1003E35CC /* NewsListView.swift in Sources */,
 				34A9DED229471C09003E35CC /* ContentView.swift in Sources */,
+				34781F0229487382003E0C70 /* NewsSearchView.swift in Sources */,
+				34781F082948B0AF003E0C70 /* WeatherAPI.swift in Sources */,
+				34781F0A2948B0D7003E0C70 /* CurrentWeatherData.swift in Sources */,
 				34A9DEEC29471E57003E35CC /* NewsAPI.swift in Sources */,
+				34781F062948AB12003E0C70 /* NewsHomeView.swift in Sources */,
 				34A9DED029471C09003E35CC /* NewsApplicationApp.swift in Sources */,
+				34781F122948BCA5003E0C70 /* CurrentWeatherViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +460,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"NewsApplication/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NewsApplication/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -439,6 +490,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"NewsApplication/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NewsApplication/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

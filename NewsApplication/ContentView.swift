@@ -11,17 +11,43 @@ struct ContentView: View {
     
     @StateObject var realmManager = RealmManager()
     @StateObject var newsDataVM = NewsDataViewModel()
+    @StateObject var currentWeatherVM = CurrentWeatherViewModel()
     
-    var body: some View {
-        NewsListView(articles: articles)
-            .environmentObject(realmManager)
+    @State private var selectedTab: Tab = .house
+    @State private var isShowingMenu = false
+    
+    init() {
+        UITabBar.appearance().isHidden = true
     }
     
-    private var articles: [Article] {
-        if case let .success(articles) = newsDataVM.phase {
-            return articles
-        } else {
-            return NewsData.previewNewsData
+    var body: some View {
+        ZStack {
+            VStack {
+                TabView(selection: $selectedTab) {
+                    switch selectedTab {
+                    case .house:
+                        VStack {
+                            NewsHomeView(newsDataVM: newsDataVM, currentWeatherVM: currentWeatherVM)
+                                .environmentObject(realmManager)
+                        }
+                    case .heart:
+                        NewsFavouritesListView()
+                            .padding(.bottom, 70)
+                            .environmentObject(realmManager)
+                    case .magnifyingglass:
+                        NewsSearchView()
+                            .environmentObject(realmManager)
+                    case .cloud:
+                        Text(newsDataVM.fetchPickerValues.category.text)
+                    case .gearshape:
+                        SettingsView(newsDataVM: newsDataVM)
+                    }
+                }
+            }
+            VStack {
+                Spacer()
+                CustomTabBar(selectedTab: $selectedTab)
+            }
         }
     }
 }

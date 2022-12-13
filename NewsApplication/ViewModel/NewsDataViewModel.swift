@@ -54,7 +54,7 @@ class NewsDataViewModel: ObservableObject {
     func loadNews() async {
         phase = .success(NewsData.previewNewsData)
 //        phase = .empty
-
+//
 //        do {
 //            let newsArticles = try await newsAPI.getNews(from: fetchPickerValues.category, country: fetchPickerValues.country)
 //            phase = .success(newsArticles)

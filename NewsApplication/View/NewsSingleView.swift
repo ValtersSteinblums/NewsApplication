@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 
 struct NewsSingleView: View {
@@ -18,9 +19,9 @@ struct NewsSingleView: View {
     var body: some View {
         VStack {
             // Article contents
-            //            WebImage(url: article.imageURL)
-            //                .resizable()
-            //                .frame(height: 250)
+            WebImage(url: article.imageURL)
+                .resizable()
+                .frame(height: 250)
             
             VStack(alignment: .leading) {
                 Text(article.title)
@@ -46,20 +47,31 @@ struct NewsSingleView: View {
                     } label: {
                         Image(systemName: realmManager.isArticleSaved(articleId: article.id) ? "heart.fill" : "heart")
                     }
+                    .buttonStyle(.bordered)
+                    .foregroundColor(.pink)
+                    
+                    Button {
+                        shareButtonView(url: article.url)
+                    } label: {
+                        Image(systemName: "square.and.arrow.up")
+                    }
+                    .buttonStyle(.bordered)
                 }
-                .buttonStyle(.bordered)
-                .foregroundColor(.pink)
-                
-                Button {
-                    //
-                } label: {
-                    Image(systemName: "square.and.arrow.up")
-                }
-                .buttonStyle(.bordered)
-                
             }
+            .padding([.horizontal, .bottom], 10)
         }
-        .padding([.horizontal, .bottom], 10)
+        
+    }
+}
+
+// add to extensions group and in a new file later
+extension View {
+    func shareButtonView(url: String) {
+        let activityVC = UIActivityViewController(activityItems: [url], applicationActivities: nil)
+        (UIApplication.shared.connectedScenes.first as? UIWindowScene)?
+            .keyWindow?
+            .rootViewController?
+            .present(activityVC, animated: true)
     }
 }
 

@@ -1,0 +1,46 @@
+{
+    "coord": {
+        "lon": 21.5606,
+        "lat": 57.3894
+    },
+    "weather": [
+        {
+            "id": 804,
+            "main": "Clouds",
+            "description": "overcast clouds",
+            "icon": "04d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 0.96,
+        "feels_like": -0.72,
+        "temp_min": 0.96,
+        "temp_max": 0.96,
+        "pressure": 1033,
+        "humidity": 100
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 1.54,
+        "deg": 120
+    },
+    "clouds": {
+        "all": 100
+    },
+    "dt": 1669795571,
+    "sys": {
+        "type": 1,
+        "id": 1877,
+        "country": "LV",
+        "sunrise": 1669790841,
+        "sunset": 1669816664
+    },
+    "timezone": 7200,
+    "id": 454310,
+    "name": "Ventspils",
+    "cod": 200
+}
+
+
+
