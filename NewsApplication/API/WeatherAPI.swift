@@ -33,7 +33,7 @@ struct WeatherAPI {
     }
     
     func getForcastedWeather() async throws -> ForecastWeatherData {
-        let url = URL(string: "https://api.openweathermap.org/data/2.5/forecast?lat=44.34&lon=10.99&units=metric&cnt=1&appid=e04ea9586936265be7e8a6dbdd410773")!
+        let url = URL(string: "https://api.openweathermap.org/data/2.5/forecast?lat=44.34&lon=10.99&units=metric&cnt=12&appid=e04ea9586936265be7e8a6dbdd410773")!
         
         let urlRequest = URLRequest(url: url)
         let (data, response) = try await session.data(for: urlRequest)

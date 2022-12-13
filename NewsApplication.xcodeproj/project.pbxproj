@@ -19,6 +19,13 @@
 		34781F0C2948B0FA003E0C70 /* ForecastWeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34781F0B2948B0FA003E0C70 /* ForecastWeatherData.swift */; };
 		34781F0E2948B1C3003E0C70 /* SimpleWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34781F0D2948B1C3003E0C70 /* SimpleWeatherView.swift */; };
 		34781F122948BCA5003E0C70 /* CurrentWeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34781F112948BCA5003E0C70 /* CurrentWeatherViewModel.swift */; };
+		34781F142948C139003E0C70 /* ForecastWeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34781F132948C139003E0C70 /* ForecastWeatherViewModel.swift */; };
+		34781F162948C1C7003E0C70 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34781F152948C1C7003E0C70 /* WeatherView.swift */; };
+		34781F182948C221003E0C70 /* CurrentWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34781F172948C221003E0C70 /* CurrentWeatherView.swift */; };
+		34781F1A2948C263003E0C70 /* ForecastWeatherHGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34781F192948C263003E0C70 /* ForecastWeatherHGridView.swift */; };
+		34781F1C2948C29C003E0C70 /* TommorowsTempView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34781F1B2948C29C003E0C70 /* TommorowsTempView.swift */; };
+		34781F1E2948C2BB003E0C70 /* SunriseSunsetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34781F1D2948C2BB003E0C70 /* SunriseSunsetView.swift */; };
+		34781F202948C2EF003E0C70 /* UvWindHumidityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34781F1F2948C2EF003E0C70 /* UvWindHumidityView.swift */; };
 		34A9DED029471C09003E35CC /* NewsApplicationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A9DECF29471C09003E35CC /* NewsApplicationApp.swift */; };
 		34A9DED229471C09003E35CC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A9DED129471C09003E35CC /* ContentView.swift */; };
 		34A9DED429471C0B003E35CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34A9DED329471C0B003E35CC /* Assets.xcassets */; };
@@ -49,6 +56,13 @@
 		34781F0B2948B0FA003E0C70 /* ForecastWeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastWeatherData.swift; sourceTree = "<group>"; };
 		34781F0D2948B1C3003E0C70 /* SimpleWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleWeatherView.swift; sourceTree = "<group>"; };
 		34781F112948BCA5003E0C70 /* CurrentWeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherViewModel.swift; sourceTree = "<group>"; };
+		34781F132948C139003E0C70 /* ForecastWeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastWeatherViewModel.swift; sourceTree = "<group>"; };
+		34781F152948C1C7003E0C70 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
+		34781F172948C221003E0C70 /* CurrentWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherView.swift; sourceTree = "<group>"; };
+		34781F192948C263003E0C70 /* ForecastWeatherHGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastWeatherHGridView.swift; sourceTree = "<group>"; };
+		34781F1B2948C29C003E0C70 /* TommorowsTempView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TommorowsTempView.swift; sourceTree = "<group>"; };
+		34781F1D2948C2BB003E0C70 /* SunriseSunsetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunriseSunsetView.swift; sourceTree = "<group>"; };
+		34781F1F2948C2EF003E0C70 /* UvWindHumidityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UvWindHumidityView.swift; sourceTree = "<group>"; };
 		34A9DECC29471C09003E35CC /* NewsApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34A9DECF29471C09003E35CC /* NewsApplicationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsApplicationApp.swift; sourceTree = "<group>"; };
 		34A9DED129471C09003E35CC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -82,6 +96,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34781F212948C403003E0C70 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				34781F052948AB12003E0C70 /* NewsHomeView.swift */,
+				34A9DEE529471D91003E35CC /* NewsSingleView.swift */,
+				34A9DEE729471DF1003E35CC /* NewsListView.swift */,
+				34A9DEF529476323003E35CC /* NewsFavouritesListView.swift */,
+				34781F0129487382003E0C70 /* NewsSearchView.swift */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		34781F222948C413003E0C70 /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				34781F0D2948B1C3003E0C70 /* SimpleWeatherView.swift */,
+				34781F152948C1C7003E0C70 /* WeatherView.swift */,
+				34781F172948C221003E0C70 /* CurrentWeatherView.swift */,
+				34781F192948C263003E0C70 /* ForecastWeatherHGridView.swift */,
+				34781F1B2948C29C003E0C70 /* TommorowsTempView.swift */,
+				34781F1D2948C2BB003E0C70 /* SunriseSunsetView.swift */,
+				34781F1F2948C2EF003E0C70 /* UvWindHumidityView.swift */,
+			);
+			path = Weather;
+			sourceTree = "<group>";
+		};
 		34A9DEC329471C09003E35CC = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +186,7 @@
 				34A9DEE329471D66003E35CC /* NewsDataViewModel.swift */,
 				34A9DEF129472A1A003E35CC /* NewsFavouritesViewModel.swift */,
 				34781F112948BCA5003E0C70 /* CurrentWeatherViewModel.swift */,
+				34781F132948C139003E0C70 /* ForecastWeatherViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -153,14 +194,10 @@
 		34A9DEDF29471CE8003E35CC /* View */ = {
 			isa = PBXGroup;
 			children = (
-				34781F052948AB12003E0C70 /* NewsHomeView.swift */,
-				34A9DEE529471D91003E35CC /* NewsSingleView.swift */,
-				34A9DEE729471DF1003E35CC /* NewsListView.swift */,
-				34A9DEF529476323003E35CC /* NewsFavouritesListView.swift */,
-				34781F0129487382003E0C70 /* NewsSearchView.swift */,
+				34781F212948C403003E0C70 /* News */,
+				34781F222948C413003E0C70 /* Weather */,
 				34781EFB29486581003E0C70 /* CustomTabBar.swift */,
 				34781F032948A5A6003E0C70 /* SettingsView.swift */,
-				34781F0D2948B1C3003E0C70 /* SimpleWeatherView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -308,6 +345,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34781F142948C139003E0C70 /* ForecastWeatherViewModel.swift in Sources */,
 				34781F042948A5A6003E0C70 /* SettingsView.swift in Sources */,
 				34A9DEF029471E9B003E35CC /* NewsCountry.swift in Sources */,
 				34A9DEEE29471E85003E35CC /* NewsCategory.swift in Sources */,
@@ -316,12 +354,18 @@
 				34A9DEF629476323003E35CC /* NewsFavouritesListView.swift in Sources */,
 				34781F0C2948B0FA003E0C70 /* ForecastWeatherData.swift in Sources */,
 				34781F0E2948B1C3003E0C70 /* SimpleWeatherView.swift in Sources */,
+				34781F182948C221003E0C70 /* CurrentWeatherView.swift in Sources */,
 				34A9DEE429471D66003E35CC /* NewsDataViewModel.swift in Sources */,
 				34A9DEF229472A1A003E35CC /* NewsFavouritesViewModel.swift in Sources */,
 				34A9DEE629471D91003E35CC /* NewsSingleView.swift in Sources */,
+				34781F1A2948C263003E0C70 /* ForecastWeatherHGridView.swift in Sources */,
+				34781F162948C1C7003E0C70 /* WeatherView.swift in Sources */,
+				34781F1E2948C2BB003E0C70 /* SunriseSunsetView.swift in Sources */,
+				34781F202948C2EF003E0C70 /* UvWindHumidityView.swift in Sources */,
 				34A9DEEA29471E25003E35CC /* NewsData.swift in Sources */,
 				34A9DEE829471DF1003E35CC /* NewsListView.swift in Sources */,
 				34A9DED229471C09003E35CC /* ContentView.swift in Sources */,
+				34781F1C2948C29C003E0C70 /* TommorowsTempView.swift in Sources */,
 				34781F0229487382003E0C70 /* NewsSearchView.swift in Sources */,
 				34781F082948B0AF003E0C70 /* WeatherAPI.swift in Sources */,
 				34781F0A2948B0D7003E0C70 /* CurrentWeatherData.swift in Sources */,

@@ -38,7 +38,7 @@ struct ContentView: View {
                         NewsSearchView()
                             .environmentObject(realmManager)
                     case .cloud:
-                        Text(newsDataVM.fetchPickerValues.category.text)
+                        WeatherView(currentWeatherVM: CurrentWeatherViewModel(), forecastWeatherVM: ForecastWeatherViewModel())
                     case .gearshape:
                         SettingsView(newsDataVM: newsDataVM)
                     }
