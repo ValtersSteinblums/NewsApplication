@@ -52,9 +52,6 @@ struct CurrentWeatherData: Codable {
 
 // computed variables for easier viewing
 extension CurrentWeatherData.MainTemp {
-    var currentTemp: String {
-        return String(temp)
-    }
     
     var feelsLike: Double {
         return feels_like

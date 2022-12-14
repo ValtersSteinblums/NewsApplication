@@ -26,7 +26,7 @@ class NewsDataViewModel: ObservableObject {
     @Published var searchQuerry = ""
     private let newsAPI = NewsAPI.shared
     
-    init(newsArticles: [Article]? = nil, selectedCategory: NewsCategory = .general, selectedCountry: NewsCountry = .us) {
+    init(newsArticles: [Article]? = nil, selectedCategory: NewsCategory = .general, selectedCountry: NewsCountry = .LV) {
         if let newsArticles = newsArticles {
             self.phase = .success(newsArticles)
         } else {
@@ -51,15 +51,27 @@ class NewsDataViewModel: ObservableObject {
         }
     }
     
-    func loadNews() async {
-        phase = .success(NewsData.previewNewsData)
+//    func loadNewsByLocation(for country: String) async {
+//        phase = .success(NewsData.previewNewsData)
 //        phase = .empty
-//
+//        
 //        do {
-//            let newsArticles = try await newsAPI.getNews(from: fetchPickerValues.category, country: fetchPickerValues.country)
+//            let newsArticles = try await newsAPI.getNewsByLocation(from: fetchPickerValues.category, country: country)
 //            phase = .success(newsArticles)
 //        } catch {
 //            phase = .failure(error)
 //        }
+//    }
+    
+    func loadNews() async {
+        phase = .success(NewsData.previewNewsData)
+        //        phase = .empty
+        //
+        //        do {
+        //            let newsArticles = try await newsAPI.getNews(from: fetchPickerValues.category, country: fetchPickerValues.country)
+        //            phase = .success(newsArticles)
+        //        } catch {
+        //            phase = .failure(error)
+        //        }
     }
 }

@@ -6,12 +6,14 @@
 //
 
 import SwiftUI
+import CoreLocation
 
 struct WeatherView: View {
     
     //let forecast: ForecastWeatherData
     @StateObject var currentWeatherVM: CurrentWeatherViewModel
     @StateObject var forecastWeatherVM: ForecastWeatherViewModel
+    @EnvironmentObject var locationManager: LocationManager
     
     @State private var searchQuery = ""
     
@@ -23,22 +25,27 @@ struct WeatherView: View {
                     CurrentWeatherView(currentWeather: currentWeather)
                         .padding(.bottom, 30)
                         .task {
-                            await loadCurrentWeather()
+                            if let location = locationManager.location {
+                                await loadCurrentWeather(latitude: location.latitude, longitude: location.longitude)
+                            }
                         }
                     
                     CustomSectionView(view: AnyView(
                         ForecastWeatherHGridView(forecast: forecastWeather)
                             .padding()
                             .task {
-                                await loadForecastWeather()
+                                if let location = locationManager.location {
+                                    await loadForecastWeather(latitude: location.latitude, longitude: location.longitude)
+                                }
                             }
+                            .scrollIndicators(.hidden)
                     ))
                     
                     CustomSectionView(view: AnyView(TommorowsTempView()))
                     
-                    CustomSectionView(view: AnyView(SunriseSunsetView()))
+                    CustomSectionView(view: AnyView(SunriseSunsetView(currentWeather: currentWeather)))
                     
-                    CustomSectionView(view: AnyView(UvWindHumidityView()))
+                    CustomSectionView(view: AnyView(UvWindHumidityView(currentWeather: currentWeather)))
                     
                     //WeatherFooterView()
                 }
@@ -64,12 +71,12 @@ struct WeatherView: View {
         .padding(.horizontal, 10)
     }
     
-    private func loadCurrentWeather() async {
-        await currentWeatherVM.loadCurrentWeather()
+    private func loadCurrentWeather(latitude: CLLocationDegrees, longitude: CLLocationDegrees) async {
+        await currentWeatherVM.loadCurrentWeather(latitude: latitude, longitude: longitude)
     }
     
-    private func loadForecastWeather() async {
-        await forecastWeatherVM.loadForecastWeather()
+    private func loadForecastWeather(latitude: CLLocationDegrees, longitude: CLLocationDegrees) async {
+        await forecastWeatherVM.loadForecastWeather(latitude: latitude, longitude: longitude)
     }
     
     private var currentWeather: CurrentWeatherData {
@@ -82,7 +89,6 @@ struct WeatherView: View {
     
     private var forecastWeather: ForecastWeatherData {
         if case let .success(forecastWeather) = forecastWeatherVM.phase {
-            print(forecastWeather)
             return forecastWeather
         } else {
             return ForecastWeatherData.previewForecastWeatherData

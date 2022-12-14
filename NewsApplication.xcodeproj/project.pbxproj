@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		29045819BE9034E89FAFD9C4 /* Pods_NewsApplication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F168CF79FBBADD14A26530EB /* Pods_NewsApplication.framework */; };
+		34154D302949E80A00E62D94 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34154D2F2949E80A00E62D94 /* Extensions.swift */; };
+		34154D322949F29900E62D94 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34154D312949F29900E62D94 /* LocationManager.swift */; };
+		34154D342949F38F00E62D94 /* NewsWelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34154D332949F38F00E62D94 /* NewsWelcomeView.swift */; };
 		34781EFC29486581003E0C70 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34781EFB29486581003E0C70 /* CustomTabBar.swift */; };
 		34781EFE294872E7003E0C70 /* currentWeather.json in Resources */ = {isa = PBXBuildFile; fileRef = 34781EFD294872E7003E0C70 /* currentWeather.json */; };
 		34781F0029487302003E0C70 /* forecastWeather.json in Resources */ = {isa = PBXBuildFile; fileRef = 34781EFF29487302003E0C70 /* forecastWeather.json */; };
@@ -45,6 +48,9 @@
 
 /* Begin PBXFileReference section */
 		1D2CBDCB13FDE37903E69290 /* Pods-NewsApplication.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsApplication.release.xcconfig"; path = "Target Support Files/Pods-NewsApplication/Pods-NewsApplication.release.xcconfig"; sourceTree = "<group>"; };
+		34154D2F2949E80A00E62D94 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		34154D312949F29900E62D94 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		34154D332949F38F00E62D94 /* NewsWelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsWelcomeView.swift; sourceTree = "<group>"; };
 		34781EFB29486581003E0C70 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		34781EFD294872E7003E0C70 /* currentWeather.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = currentWeather.json; sourceTree = "<group>"; };
 		34781EFF29487302003E0C70 /* forecastWeather.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = forecastWeather.json; sourceTree = "<group>"; };
@@ -147,6 +153,8 @@
 				34A9DED129471C09003E35CC /* ContentView.swift */,
 				34A9DECF29471C09003E35CC /* NewsApplicationApp.swift */,
 				34A9DEF329472AC1003E35CC /* RealmManager.swift */,
+				34154D312949F29900E62D94 /* LocationManager.swift */,
+				34154D2F2949E80A00E62D94 /* Extensions.swift */,
 				34A9DEE029471CF7003E35CC /* API */,
 				34A9DEDF29471CE8003E35CC /* View */,
 				34A9DEDE29471CDE003E35CC /* ViewModel */,
@@ -198,6 +206,7 @@
 				34781F222948C413003E0C70 /* Weather */,
 				34781EFB29486581003E0C70 /* CustomTabBar.swift */,
 				34781F032948A5A6003E0C70 /* SettingsView.swift */,
+				34154D332949F38F00E62D94 /* NewsWelcomeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -347,12 +356,15 @@
 			files = (
 				34781F142948C139003E0C70 /* ForecastWeatherViewModel.swift in Sources */,
 				34781F042948A5A6003E0C70 /* SettingsView.swift in Sources */,
+				34154D322949F29900E62D94 /* LocationManager.swift in Sources */,
 				34A9DEF029471E9B003E35CC /* NewsCountry.swift in Sources */,
 				34A9DEEE29471E85003E35CC /* NewsCategory.swift in Sources */,
 				34A9DEF429472AC1003E35CC /* RealmManager.swift in Sources */,
 				34781EFC29486581003E0C70 /* CustomTabBar.swift in Sources */,
 				34A9DEF629476323003E35CC /* NewsFavouritesListView.swift in Sources */,
+				34154D302949E80A00E62D94 /* Extensions.swift in Sources */,
 				34781F0C2948B0FA003E0C70 /* ForecastWeatherData.swift in Sources */,
+				34154D342949F38F00E62D94 /* NewsWelcomeView.swift in Sources */,
 				34781F0E2948B1C3003E0C70 /* SimpleWeatherView.swift in Sources */,
 				34781F182948C221003E0C70 /* CurrentWeatherView.swift in Sources */,
 				34A9DEE429471D66003E35CC /* NewsDataViewModel.swift in Sources */,

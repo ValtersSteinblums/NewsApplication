@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreLocation
 
 struct WeatherAPI {
     
@@ -19,9 +20,9 @@ struct WeatherAPI {
         return decoder
     }
     
-    func getCurrentWeather() async throws -> CurrentWeatherData {
+    func getCurrentWeather(latitude: CLLocationDegrees, longitude: CLLocationDegrees) async throws -> CurrentWeatherData {
         
-        let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?lat=57.38944&lon=21.56056&appid=e04ea9586936265be7e8a6dbdd410773&units=metric")!
+        let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?lat=\(latitude)&lon=\(longitude)&appid=e04ea9586936265be7e8a6dbdd410773&units=metric")!
         
         let urlRequest = URLRequest(url: url)
         let (data, response) = try await session.data(for: urlRequest)
@@ -32,8 +33,8 @@ struct WeatherAPI {
         return decodedData
     }
     
-    func getForcastedWeather() async throws -> ForecastWeatherData {
-        let url = URL(string: "https://api.openweathermap.org/data/2.5/forecast?lat=44.34&lon=10.99&units=metric&cnt=12&appid=e04ea9586936265be7e8a6dbdd410773")!
+    func getForcastedWeather(latitude: CLLocationDegrees, longitude: CLLocationDegrees) async throws -> ForecastWeatherData {
+        let url = URL(string: "https://api.openweathermap.org/data/2.5/forecast?lat=\(latitude)&lon=\(longitude)&units=metric&cnt=12&appid=e04ea9586936265be7e8a6dbdd410773")!
         
         let urlRequest = URLRequest(url: url)
         let (data, response) = try await session.data(for: urlRequest)
@@ -43,12 +44,5 @@ struct WeatherAPI {
         let decodedData = try jsonDecoder.decode(ForecastWeatherData.self, from: data)
         return decodedData
     }
-    
-    // TODO: - finish once setting up coreLocation is done (later..), as for now - hardcoded :)
-//    private func generateCurrentWeatherNewsURL() -> URL {
-//        var url = "https://api.openweathermap.org/data/2.5/weather?lat=57.38944&lon=21.56056&appid=e04ea9586936265be7e8a6dbdd410773&units=metric"
-//
-//        return URL(string: url)!
-//    }
     
 }

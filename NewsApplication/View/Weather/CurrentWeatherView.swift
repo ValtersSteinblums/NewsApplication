@@ -15,7 +15,7 @@ struct CurrentWeatherView: View {
         VStack(alignment: .leading) {
                 HStack {
                     VStack {
-                        Text("\(currentWeather.main.currentTemp)°")
+                        Text("\(currentWeather.main.temp.roundDouble())°")
                             .fontWeight(.bold)
                             .font(.system(size: 60))
                     }
@@ -24,7 +24,7 @@ struct CurrentWeatherView: View {
                     
                     Image(systemName: currentWeather.weather[0].weatherIcon)
                         .resizable()
-                    .frame(width: 150, height: 100)
+                    .frame(width: 100, height: 100)
                 }
                 
             
@@ -36,7 +36,7 @@ struct CurrentWeatherView: View {
             
             VStack {
                 VStack(alignment: .leading) {
-                    Text("\(currentWeather.main.tempMax.description)° / \(currentWeather.main.tempMin.description)° Feels like \(currentWeather.main.feelsLike.description)°")
+                    Text("\(currentWeather.main.tempMax.roundDouble())° / \(currentWeather.main.tempMin.roundDouble())° Feels like \(currentWeather.main.feelsLike.roundDouble())°")
                     Text(currentWeather.dt.formatted(date: .abbreviated, time: .shortened))
                 }
                 .fontWeight(.bold)

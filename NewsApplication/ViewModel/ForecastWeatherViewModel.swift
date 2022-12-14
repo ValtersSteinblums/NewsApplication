@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreLocation
 
 enum ForecastDataFetchPhase<T> {
     case empty
@@ -27,12 +28,12 @@ class ForecastWeatherViewModel: ObservableObject {
         }
     }
     
-    func loadForecastWeather() async {
+    func loadForecastWeather(latitude: CLLocationDegrees, longitude: CLLocationDegrees) async {
 //        phase = .success(ForecastWeatherData.previewForecastWeatherData)
         
         phase = .empty
         do {
-            let forecastWeather = try await weatherAPI.getForcastedWeather()
+            let forecastWeather = try await weatherAPI.getForcastedWeather(latitude: latitude, longitude: longitude)
             phase = .success(forecastWeather)
         } catch {
             phase = .failure(error)

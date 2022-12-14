@@ -8,14 +8,17 @@
 import SwiftUI
 
 struct UvWindHumidityView: View {
+    
+    let currentWeather: CurrentWeatherData
+    
     var body: some View {
         HStack(spacing: 20) {
             
             VStack(spacing: 10) {
-                Image(systemName: "sun.min.fill")
-                Text("UV index")
+                Image(systemName: "location.fill")
+                Text("Direction")
                     .fontWeight(.bold)
-                Text("Low")
+                Text(currentWeather.wind.windDirection)
             }
             
             
@@ -31,7 +34,7 @@ struct UvWindHumidityView: View {
                 Image(systemName: "wind")
                 Text("Wind")
                     .fontWeight(.bold)
-                Text("11 km/h")
+                Text("\(currentWeather.wind.speed.roundDouble()) m/s")
             }
             
             
@@ -59,6 +62,6 @@ struct UvWindHumidityView: View {
 
 struct UvWindHumidityView_Previews: PreviewProvider {
     static var previews: some View {
-        UvWindHumidityView()
+        UvWindHumidityView(currentWeather: CurrentWeatherData.previewCurrentWeatherData)
     }
 }

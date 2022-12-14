@@ -10,35 +10,35 @@ import Foundation
 enum NewsCountry: String, CaseIterable, Identifiable {
     var id: Self {self}
     
-    case lv
-    case lt
-    case ru
-    case pl
-    case us
-    case cz
-    case de
-    case fr
-    case gb
+    case LV
+    case LT
+    case RU
+    case PL
+    case US
+    case CZ
+    case DE
+    case FR
+    case GB
     
     var text: String {
         switch self {
-        case .lv:
+        case .LV:
             return "Latvia"
-        case .lt:
+        case .LT:
             return "Lithuania"
-        case .ru:
+        case .RU:
             return "Russia"
-        case .pl:
+        case .PL:
             return "Poland"
-        case .us:
+        case .US:
             return "USA"
-        case .cz:
+        case .CZ:
             return "Czechia"
-        case .de:
+        case .DE:
             return "Denmark"
-        case .fr:
+        case .FR:
             return "France"
-        case .gb:
+        case .GB:
             return "Great Britain"
         }
     }

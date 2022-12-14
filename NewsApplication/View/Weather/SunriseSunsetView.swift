@@ -8,20 +8,23 @@
 import SwiftUI
 
 struct SunriseSunsetView: View {
+    
+    let currentWeather: CurrentWeatherData
+    
     var body: some View {
         HStack(spacing: 100) {
             VStack(spacing: 10) {
                 Text("Sunrise")
                     .fontWeight(.bold)
                 Image(systemName: "sunrise.fill")
-                Text("12:00")
+                Text(currentWeather.sys.sunrise.formatted(date: .omitted, time: .shortened))
             }
             
             VStack(spacing: 10) {
                 Text("Sunset")
                     .fontWeight(.bold)
                 Image(systemName: "sunset.fill")
-                Text("12:00")
+                Text(currentWeather.sys.sunset.formatted(date: .omitted, time: .shortened))
             }
             
         }
@@ -32,6 +35,6 @@ struct SunriseSunsetView: View {
 
 struct SunriseSunsetView_Previews: PreviewProvider {
     static var previews: some View {
-        SunriseSunsetView()
+        SunriseSunsetView(currentWeather: CurrentWeatherData.previewCurrentWeatherData)
     }
 }

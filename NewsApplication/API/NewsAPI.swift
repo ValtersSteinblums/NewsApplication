@@ -23,6 +23,10 @@ struct NewsAPI {
         try await fetchNews(from: generateTopNewsURL(from: category, country: country))
     }
     
+//    func getNewsByLocation(from category: NewsCategory, country: String) async throws -> [Article] {
+//        try await fetchNews(from: generateTopNewsURLByLocation(from: category, country: country))
+//    }
+    
     func searchNews(from query: String) async throws -> [Article] {
         try await fetchNews(from: generateSearchURL(from: query))
     }
@@ -46,6 +50,14 @@ struct NewsAPI {
         url += "&country=\(country)"
         return URL(string: url)!
     }
+    
+//    func generateTopNewsURLByLocation(from category: NewsCategory, country: String) -> URL {
+//        var url = "https://newsapi.org/v2/top-headlines/?"
+//        url += "apiKey=\(apiKey)"
+//        url += "&category=\(category)"
+//        url += "&country=\(country)"
+//        return URL(string: url)!
+//    }
     
     func generateSearchURL(from query: String) -> URL {
         var url = "https://newsapi.org/v2/everything?"

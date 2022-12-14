@@ -20,11 +20,11 @@ struct ForecastWeatherHGridView: View {
                         Text(item.dt.formatted(date: .omitted, time: .shortened))
                         Image(systemName: item.weather[0].weatherIcon)
                             .resizable()
-                            .frame(width: 70, height: 50)
+                            .frame(width: 50, height: 50)
                         
                         VStack(alignment: .center, spacing: 20) {
-                            Text("\(item.main.temp.description)°C")
-                            Text("💧\(item.main.humidity.description)%")
+                            Text("\(item.main.temp.roundDouble())°C")
+                            Text("💧\(item.main.humidity.roundDouble())%")
                         }
                         .font(.subheadline)
                         .fontWeight(.bold)

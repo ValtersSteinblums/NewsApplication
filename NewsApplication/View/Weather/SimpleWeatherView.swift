@@ -10,6 +10,7 @@ import SwiftUI
 struct SimpleWeatherView: View {
     
     let currentWeather: CurrentWeatherData
+    //@EnvironmentObject var locationManager: LocationManager
     
     var body: some View {
         HStack {
@@ -28,7 +29,7 @@ struct SimpleWeatherView: View {
             Spacer()
             
             HStack {
-                Text("\(currentWeather.main.currentTemp)°C")
+                Text("\(currentWeather.main.temp.roundDouble())°C")
                     .font(.title)
                     .fontWeight(.bold)
                 
@@ -38,14 +39,6 @@ struct SimpleWeatherView: View {
                     .frame(width: 35, height: 35)
             }
         }
-        //        .padding()
-        //        .background(Color.secondary)
-        //        .clipShape(RoundedRectangle(cornerRadius: 20))
-        //
-        //        .overlay(
-        //            RoundedRectangle(cornerRadius: 20)
-        //                .stroke(.black)
-        //        )
         .padding(.horizontal, 10)
     }
 }
@@ -53,5 +46,6 @@ struct SimpleWeatherView: View {
 struct SimpleWeatherView_Previews: PreviewProvider {
     static var previews: some View {
         SimpleWeatherView(currentWeather: CurrentWeatherData.previewCurrentWeatherData)
+            .environmentObject(LocationManager())
     }
 }
