@@ -36,7 +36,7 @@ struct CurrentWeatherView: View {
             
             VStack {
                 VStack(alignment: .leading) {
-                    Text("\(currentWeather.main.tempMax.roundDouble())° / \(currentWeather.main.tempMin.roundDouble())° Feels like \(currentWeather.main.feelsLike.roundDouble())°")
+                    Text("Max \(currentWeather.main.tempMax.roundDouble())° / Min \(currentWeather.main.tempMin.roundDouble())° Feels like \(currentWeather.main.feelsLike.roundDouble())°")
                     Text(currentWeather.dt.formatted(date: .abbreviated, time: .shortened))
                 }
                 .fontWeight(.bold)

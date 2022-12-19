@@ -45,4 +45,30 @@ struct WeatherAPI {
         return decodedData
     }
     
+    func searchCurrentWeather(for city: String) async throws -> CurrentWeatherData {
+        
+        let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(city)&appid=e04ea9586936265be7e8a6dbdd410773&units=metric")!
+        
+        let urlRequest = URLRequest(url: url)
+        let (data, response) = try await session.data(for: urlRequest)
+        
+        guard (response as? HTTPURLResponse)?.statusCode == 200 else { fatalError("Bad response") }
+        
+        let decodedData = try jsonDecoder.decode(CurrentWeatherData.self, from: data)
+        return decodedData
+    }
+    
+    func searchForecastWeather(for city: String) async throws -> ForecastWeatherData {
+        
+        let url = URL(string: "https://api.openweathermap.org/data/2.5/forecast?q=\(city)&appid=e04ea9586936265be7e8a6dbdd410773&units=metric")!
+
+        let urlRequest = URLRequest(url: url)
+        let (data, response) = try await session.data(for: urlRequest)
+        
+        guard (response as? HTTPURLResponse)?.statusCode == 200 else { fatalError("Bad response") }
+        
+        let decodedData = try jsonDecoder.decode(ForecastWeatherData.self, from: data)
+        return decodedData
+    }
+    
 }

@@ -15,7 +15,8 @@ struct WeatherView: View {
     @StateObject var forecastWeatherVM: ForecastWeatherViewModel
     @EnvironmentObject var locationManager: LocationManager
     
-    @State private var searchQuery = ""
+    @State private var searchWeather = ""
+
     
     var body: some View {
         NavigationStack {
@@ -49,7 +50,13 @@ struct WeatherView: View {
                     
                     //WeatherFooterView()
                 }
-                .searchable(text: $searchQuery, placement: .navigationBarDrawer(displayMode: .always))
+                .searchable(text: $searchWeather, placement: .navigationBarDrawer(displayMode: .always))
+                .onSubmit(of: .search) {
+                    Task {
+                        await currentWeatherVM.searchCurrentWeather(for: searchWeather)
+                        await forecastWeatherVM.searchForecastWeather(for: searchWeather)
+                    }
+                }
             }
         }
     }
@@ -99,5 +106,6 @@ struct WeatherView: View {
 struct WeatherView_Previews: PreviewProvider {
     static var previews: some View {
         WeatherView(currentWeatherVM: CurrentWeatherViewModel(), forecastWeatherVM: ForecastWeatherViewModel())
+            .environmentObject(LocationManager())
     }
 }

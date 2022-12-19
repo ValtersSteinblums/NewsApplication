@@ -28,6 +28,21 @@ class CurrentWeatherViewModel: ObservableObject {
         }
     }
     
+    func searchCurrentWeather(for city: String) async {
+        phase = .empty
+        
+        if city.isEmpty {
+            return
+        }
+        
+        do {
+            let currentWeather = try await weatherAPI.searchCurrentWeather(for: city)
+            phase = .success(currentWeather)
+        } catch {
+            phase = .failure(error)
+        }
+    }
+    
     func loadCurrentWeather(latitude: CLLocationDegrees, longitude: CLLocationDegrees) async {
 //        phase = .success(CurrentWeatherData.previewCurrentWeatherData)
         
